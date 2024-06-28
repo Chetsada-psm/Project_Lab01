@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 56, 161, 231)),
         useMaterial3: true,
       ),
       home: MyAppPage(),
@@ -26,7 +26,7 @@ class MyAppPage extends StatelessWidget {
     List<String> names = [
       "นายชาญณรงค์ แต่งเมือง",
       "นางสาวนภัสสร ดวงจันทร์",
-      "นายเจษฏา พบสมัย", 
+      "นายเจษฏา พบสมัย",
       "นายศรันย์ ซุ่นเส้ง",
       "นายกมล จันบุตรดี",
       "นายประสิทธิชัย จันทร์สม",
@@ -44,14 +44,14 @@ class MyAppPage extends StatelessWidget {
       "643450320-4",
     ];
     List<String> images = [
-      'images/1.jpg',
-      'images/2.jpg',
-      'images/3.jpg',
-      'images/4.jpg',
-      'images/5.jpg',
-      'images/6.jpg',
-      'images/7.jpg',
-      'images/8.jpg',
+      'assets/images/1.jpg',
+      'assets/images/2.jpg',
+      'assets/images/3.jpg',
+      'assets/images/4.jpg',
+      'assets/images/5.jpg',
+      'assets/images/6.jpg',
+      'assets/images/7.jpg',
+      'assets/images/8.jpg',
     ];
 
     return Scaffold(
@@ -73,8 +73,11 @@ class MyAppPage extends StatelessWidget {
   }
 
   Widget displayNameItem({required String name, required String id, required String image}) {
+    bool isHighlighted = name == "นายเจษฏา พบสมัย" && id == "643450323-8";
+
     return Container(
       padding: const EdgeInsets.all(10),
+      color: isHighlighted ? Color.fromARGB(255, 56, 161, 231) : Colors.transparent,
       child: Row(
         children: [
           Image.asset(
@@ -89,11 +92,11 @@ class MyAppPage extends StatelessWidget {
             children: [
               Text(
                 name,
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),
               ),
               Text(
                 id,
-                style: const TextStyle(fontSize: 14, color: Colors.grey),
+                style: const TextStyle(fontSize: 14, color: Colors.black),
               ),
             ],
           ),
