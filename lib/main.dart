@@ -31,7 +31,7 @@ class MyAppPage extends StatelessWidget {
       "นายกมล จันบุตรดี",
       "นายประสิทธิชัย จันทร์สม",
       "นายก้องภพ ตาดี",
-      "นางสาวกฤติยา สินโพธิ์",
+      "นางสาวสุธาดา เสนามงคล",
     ];
     List<String> ids = [
       "643450069-6",
@@ -41,7 +41,7 @@ class MyAppPage extends StatelessWidget {
       "643450063-8",
       "643450079-3",
       "643450321-2",
-      "643450320-4",
+      "643450089-0",
     ];
     List<String> images = [
       'assets/images/1.jpg',
